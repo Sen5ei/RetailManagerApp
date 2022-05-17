@@ -37,7 +37,8 @@ namespace RMDesktopUI
                 .Singleton<IWindowManager, WindowManager>()
                 // Using EventAggregator we can pass event messaging throughout our application.
                 // One piece can raise and event and different piece can listen for it and do something with that event. 
-                .Singleton<IEventAggregator, EventAggregator>();
+                .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<IAPIHelper, APIHelper>();
 
             // Connect all of our ViewModels to our Views
             GetType().Assembly.GetTypes()
