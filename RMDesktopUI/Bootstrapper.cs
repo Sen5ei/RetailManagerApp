@@ -1,5 +1,7 @@
 ﻿using Caliburn.Micro;
 using RMDesktopUI.Helpers;
+using RMDesktopUI.Library.Api;
+using RMDesktopUI.Library.Models;
 using RMDesktopUI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -38,7 +40,8 @@ namespace RMDesktopUI
                 // Using EventAggregator we can pass event messaging throughout our application.
                 // One piece can raise and event and different piece can listen for it and do something with that event. 
                 .Singleton<IEventAggregator, EventAggregator>()
-                .Singleton<IAPIHelper, APIHelper>();
+                .Singleton<IAPIHelper, APIHelper>()
+                .Singleton<ILoggedInUserModel, LoggedInUserModel>();
 
             // Connect all of our ViewModels to our Views
             GetType().Assembly.GetTypes()

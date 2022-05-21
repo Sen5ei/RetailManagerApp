@@ -1,9 +1,10 @@
 ﻿using System;
 
-namespace RMDataManager.Library.Models
+namespace RMDesktopUI.Library.Models
 {
-    public class UserModel
+    public class LoggedInUserModel : ILoggedInUserModel
     {
+        public string Token { get; set; }
         public string Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
