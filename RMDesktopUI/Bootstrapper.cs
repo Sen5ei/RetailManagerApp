@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using RMDesktopUI.Helpers;
 using RMDesktopUI.Library.Api;
+using RMDesktopUI.Library.Helpers;
 using RMDesktopUI.Library.Models;
 using RMDesktopUI.ViewModels;
 using System;
@@ -42,6 +43,7 @@ namespace RMDesktopUI
                 // One piece can raise and event and different piece can listen for it and do something with that event. 
                 .Singleton<IEventAggregator, EventAggregator>()
                 .Singleton<IAPIHelper, APIHelper>()
+                .Singleton<IConfigHelper, ConfigHelper>()
                 .Singleton<ILoggedInUserModel, LoggedInUserModel>();
 
             // Connect all of our ViewModels to our Views
