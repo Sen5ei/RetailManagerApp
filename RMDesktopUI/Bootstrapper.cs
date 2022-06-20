@@ -34,7 +34,8 @@ namespace RMDesktopUI
         {
             // Whenever we ask for a SimpleContainer instance, it will return it.
             _container.Instance(_container)
-                .PerRequest<IProductEndpoint, ProductEndpoint>();
+                .PerRequest<IProductEndpoint, ProductEndpoint>()
+                .PerRequest<ISaleEndpoint, SaleEndpoint>();
 
             _container
                 // WindowManager that handles the idea of bringing windows in and out
