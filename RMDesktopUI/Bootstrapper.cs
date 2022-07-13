@@ -79,7 +79,7 @@ namespace RMDesktopUI
             // Start ShellViewModel on startup, which will then launch the ShellView.xaml as our base view
             // (based upon CaliburnMicro wiring those two things together),
             // since we deleted MainWindow.xaml and adjusted App.xaml
-            DisplayRootViewFor<ShellViewModel>();
+            DisplayRootViewForAsync<ShellViewModel>();
         }
 
         protected override object GetInstance(Type service, string key)
